@@ -14,14 +14,14 @@ import static io.qameta.allure.Allure.step;
 public class WikiSearchTests extends TestBase {
 
     @Test
-    @DisplayName("Проверка работы поиска в приложении wikipedia на android")
+    @DisplayName("Wikipedia search test")
     void searchTest() {
         back();
-        step("Вводим в строку поиска Github", () -> {
+        step("Type search", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).val("Github");
         });
-        step("Проверка поиска", () ->
+        step("Verify content found", () ->
                 $$(MobileBy.id("org.wikipedia.alpha:id/page_list_item_container"))
                         .shouldHave(sizeGreaterThan(0)));
     }

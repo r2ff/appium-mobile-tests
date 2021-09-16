@@ -40,8 +40,6 @@ public class TestBase {
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
         }
-
-        //Configuration.browser = BrowserStackMobileDriver.class.getName();
         Configuration.startMaximized = false;
         Configuration.browserSize = null;
         Configuration.timeout = 10000;

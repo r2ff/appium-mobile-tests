@@ -17,7 +17,7 @@ Run test local (default):
 gradle clean test -DdeviceHost=local
 ```
 
-Also, you should add configuration file to config/(browserstack/emulator/local).properties
+Also, you should add configuration file to src/test/resources/config/(browserstack/emulator/local).properties
 
 Structure of browserstack.properties
 ```bash

@@ -30,7 +30,6 @@ public class LocalMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
 
         desiredCapabilities.setCapability("platformName", "Android");
-//        desiredCapabilities.setCapability("deviceName", "emulator-5554");
         desiredCapabilities.setCapability("deviceName", config.getLocalDevice());
         desiredCapabilities.setCapability("version", config.getLocalOsVersion());
         desiredCapabilities.setCapability("locale", "en");

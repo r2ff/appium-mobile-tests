@@ -21,8 +21,9 @@ public class WikiSearchTests extends TestBase {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).val("Github");
         });
-        step("Verify content found", () ->
+        step("Verify content found", () -> {
                 $$(MobileBy.id("org.wikipedia.alpha:id/page_list_item_container"))
-                        .shouldHave(sizeGreaterThan(0)));
+                        .shouldHave(sizeGreaterThan(0));
+        });
     }
 }
